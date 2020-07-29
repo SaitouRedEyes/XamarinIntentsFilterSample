@@ -29,7 +29,7 @@ namespace Intents_FilterSample
 
         protected override void OnResume()
         {
-            base.OnResume();
+            base.OnResume();            
 
             letter = GetIntentMessage();
         }
@@ -39,6 +39,11 @@ namespace Intents_FilterSample
             base.OnRestart();
 
             letter = GetIntentMessage();
+        }
+
+        protected override void OnPause()
+        {
+            base.OnPause();            
         }
 
         private string GetIntentMessage()
